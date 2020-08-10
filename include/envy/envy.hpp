@@ -119,14 +119,4 @@ template <typename T> T get_env(const std::string &prefix = "") {
   return result;
 }
 
-struct debug_printer {
-  template <typename T> void operator()(const char *name, const T &value) {
-    std::cerr << name << ": " << value << std::endl;
-  }
-};
-
-template <typename T> void print(const T &config) {
-  visit_struct::for_each(config, debug_printer{});
-}
-
 } // namespace envy
