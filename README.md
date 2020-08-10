@@ -59,7 +59,7 @@ Compression Level     : 9
 Forward X11?          : false
 ```
 
-### Deserialize comma-separated environment variables
+### Deserialize comma-separated values
 
 Comma-separated environment variables can be deserialized into an `std::vector`:
 
