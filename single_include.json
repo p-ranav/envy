@@ -1,5 +1,5 @@
 {
-    "project": "envy: Deserialize environment variables into type-safe structs in modern C++",
+    "project": "Deserialize environment variables into type-safe structs",
     "target": "single_include/envy/envy.hpp",
     "sources": [
         "include/envy/json.hpp",
