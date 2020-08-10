@@ -48,8 +48,8 @@ Here's the stdout of the above program:
 ```bash
 ▶ ./main
 Server Alive Interval : 45
-Compression Enabled?  : true
-Compression Level     : 9
+Compression Enabled?  : false
+Compression Level     : 0
 Forward X11?          : true
 
 ▶ SERVER_ALIVE_INTERVAL=90 COMPRESSION=1 COMPRESSION_LEVEL=9 FORWARD_X11=0 ./main
