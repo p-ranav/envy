@@ -2,6 +2,16 @@
   <img height="70" src="img/logo.png"/>  
 </p>
 
+<p align="center">
+  <a href="https://en.wikipedia.org/wiki/C%2B%2B14">
+    <img src="https://img.shields.io/badge/C%2B%2B-14-blue.svg" alt="standard"/>
+  </a>
+  <a href="https://github.com/p-ranav/tabulate/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license"/>
+  </a>
+  <img src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" alt="version"/>
+</p>
+
 `envy` is a small header-only library to deserialize environment variables into type-safe structs.
 
 ### Getting Started
