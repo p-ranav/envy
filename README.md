@@ -2,6 +2,10 @@
 
 `envy` is a small header-only library to deserialize environment variables into type-safe structs.
 
+### Getting Started
+
+Start by creating a `struct` where to store the values of environment variables. `envy` will check for environment variables that match the name of the fields in this struct. Specifically, `envy` will match the upper-case version of the field names, e.g., a field named `foo_bar` will be matched with an environment variable named `FOO_BAR`. 
+
 ```cpp
 #include <envy/envy.hpp>
 
@@ -13,7 +17,11 @@ struct ServerConfig {
   bool forward_x11                  = true;
 };
 ENVY_CONFIG(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
+```
 
+Now, simply call `envy::get_env<T>()` to get a filled config object.
+
+```cpp
 int main() {
 
   auto config = envy::get_env<ServerConfig>();
@@ -25,6 +33,8 @@ int main() {
 
 }
 ```
+
+Here's the stdout of the above program:
 
 ```bash
 ▶ ./main
