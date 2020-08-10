@@ -113,7 +113,7 @@ template <typename T> void visit(T &config, const std::string &prefix) {
   visit_struct::for_each(config, get_env_visitor);
 }
 
-template <typename T> T get_env(const std::string &prefix = "") {
+template <typename T> T get(const std::string &prefix = "") {
   T result;
   visit(result, prefix);
   return result;
