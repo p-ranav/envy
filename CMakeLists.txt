@@ -26,7 +26,7 @@ include(GNUInstallDirs)
 add_library(envy INTERFACE)
 add_library(envy::envy ALIAS envy)
 
-target_compile_features(envy INTERFACE cxx_std_14)
+target_compile_features(envy INTERFACE cxx_std_11)
 target_include_directories(envy INTERFACE
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>)
