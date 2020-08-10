@@ -26023,7 +26023,7 @@ SOFTWARE.
 #include <type_traits>
 #include <vector>
 
-#define ENVY_CONFIG VISITABLE_STRUCT
+#define ENVY_STRUCT VISITABLE_STRUCT
 
 namespace envy {
 

@@ -27,7 +27,7 @@ struct ServerConfig {
   int compression_level     = 9;
   bool forward_x11          = true;
 };
-ENVY_CONFIG(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
+ENVY_STRUCT(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
 ```
 
 Simply call `envy::get<T>()` to get a filled config object. For each field in the struct, `envy` will look for an environment variable with the same name in upper case, e.g., for the field named `forward_x11`, `envy` will look for an environment variable named `FORWARD_X11`.
@@ -72,7 +72,7 @@ Comma-separated environment variables can be deserialized into an `std::vector`:
 struct Config {
   std::vector<int> values;
 };
-ENVY_CONFIG(Config, values);
+ENVY_STRUCT(Config, values);
 
 int main() {
   auto config = envy::get<Config>();
@@ -100,7 +100,7 @@ JSON can be deserialized into `std::map`, `std::unordered_map` or even `nlohmann
 struct Config {
   std::map<std::string, int> values;
 };
-ENVY_CONFIG(Config, values);
+ENVY_STRUCT(Config, values);
 
 int main() {
   auto config = envy::get<Config>();
@@ -130,7 +130,7 @@ struct Config {
   float bar = 0.0f;
   bool baz  = false;
 };
-ENVY_CONFIG(Config, foo, bar, baz);
+ENVY_STRUCT(Config, foo, bar, baz);
 
 int main() {
   auto config = envy::get<Config>("APP_"); // prefix for env vars
