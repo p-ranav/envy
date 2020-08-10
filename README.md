@@ -10,7 +10,6 @@ Start by creating a `struct` where to store the values of environment variables.
 #include <envy/envy.hpp>
 
 struct ServerConfig {
-  // default config
   std::size_t server_alive_interval = 45;
   bool compression                  = true;
   std::size_t compression_level     = 9;
