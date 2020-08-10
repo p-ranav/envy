@@ -18,13 +18,12 @@ struct ServerConfig {
 ENVY_CONFIG(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
 ```
 
-In the above code, `envy` will match the field named `forward_x11` with the environment variable `FORWARD_X11`, i.e., the uppercase version of the struct field name.
-
-Simply call `envy::get_env<T>()` to get a filled config object.
+Simply call `envy::get_env<T>()` to get a filled config object. For each field in the struct, `envy` will look for an environment variable with the same name in upper case, e.g., for the field named `forward_x11`, `envy` will look for an environment variable named `FORWARD_X11`.
 
 ```cpp
 int main() {
 
+  // Get environment variables and save into a `ServerConfig` object
   auto config = envy::get_env<ServerConfig>();
   
   std::cout << "Server Alive Interval : " << config.server_alive_interval << "\n";
