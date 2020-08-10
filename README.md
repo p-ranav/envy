@@ -62,7 +62,9 @@ Compression Level     : 9
 Forward X11?          : false
 ```
 
-### Deserialize comma-separated environment variables into `std::vector`
+### Deserialize comma-separated environment variables
+
+Comma-separated environment variables can be deserialized into an `std::vector`:
 
 ```cpp
 #include <envy/envy.hpp>
@@ -88,7 +90,9 @@ int main() {
 1 2 3 4 5
 ```
 
-### Deserialize JSON into `std::map` (or `std::unordered_map` or even `nlohmann::json`)
+### Deserialize JSON
+
+JSON can be deserialized into `std::map`, `std::unordered_map` or even `nlohmann::json`:
 
 ```cpp
 #include <envy/envy.hpp>
@@ -116,7 +120,7 @@ b : 2
 c : 3
 ```
 
-### Add a common application prefix to environment variables
+### Prefix for Environment Variables
 
 ```cpp
 #include <envy/envy.hpp>
