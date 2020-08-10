@@ -1,0 +1,10 @@
+{
+    "project": "envy: Deserialize environment variables into type-safe structs in modern C++",
+    "target": "single_include/envy/envy.hpp",
+    "sources": [
+        "include/envy/json.hpp",
+        "include/envy/visit_struct/visit_struct.hpp",
+        "include/envy/envy.hpp"
+    ],
+    "include_paths": ["include"]
+}
