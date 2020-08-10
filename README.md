@@ -30,7 +30,9 @@ struct ServerConfig {
 ENVY_STRUCT(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
 ```
 
-For each field in the struct, `envy` will look for an environment variable with the same name in upper case, e.g., for the field named `forward_x11`, `envy` will look for an environment variable named `FORWARD_X11`. Use `envy::get<T>()` to get a deserialized, type-safe struct.
+For each field in the struct, `envy` will look for an environment variable with the same name in upper case, e.g., for the field named `forward_x11`, `envy` will look for an environment variable named `FORWARD_X11`. 
+
+Use `envy::get<T>()` to get a deserialized, type-safe struct.
 
 ```cpp
 int main() {
