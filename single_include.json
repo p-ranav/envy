@@ -2,7 +2,7 @@
     "project": "Deserialize environment variables into type-safe structs",
     "target": "single_include/envy/envy.hpp",
     "sources": [
-        "include/envy/json.hpp",
+        "include/envy/json/json.hpp",
         "include/envy/visit_struct/visit_struct.hpp",
         "include/envy/envy.hpp"
     ],
