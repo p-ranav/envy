@@ -104,7 +104,7 @@ b : 2
 c : 3
 ```
 
-### Add prefix to environment variables
+### Add a prefix to environment variables
 
 ```cpp
 #include <envy/envy.hpp>
