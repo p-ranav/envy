@@ -1,4 +1,6 @@
-## envy
+<p align="center">
+  <img height="70" src="img/logo.png"/>  
+</p>
 
 `envy` is a small header-only library to deserialize environment variables into type-safe structs.
 
