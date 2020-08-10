@@ -70,14 +70,36 @@ int main() {
 ```
 
 ```bash
-▶ ./vec
+▶ ./main
 
-▶ VALUES=1,2,3,4,5 ./vec
+▶ VALUES=1,2,3,4,5 ./main
 1 2 3 4 5
 ```
 
 ### Deserialize JSON into `std::map`
 
 ```cpp
+#include <envy/envy.hpp>
 
+struct Config {
+  std::map<std::string, int> values;
+};
+ENVY_CONFIG(Config, values);
+
+int main() {
+  auto config = envy::get<Config>();
+
+  for (auto& kv : config.values) {
+    std::cout << kv.first << " : " << kv.second << "\n";
+  }
+}
+```
+
+```bash
+▶ ./main
+
+▶ VALUES='{"a": 1, "b": 2, "c": 3}' ./main
+a : 1
+b : 2
+c : 3
 ```
