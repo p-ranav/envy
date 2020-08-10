@@ -103,3 +103,36 @@ a : 1
 b : 2
 c : 3
 ```
+
+### Add prefix to environment variables
+
+```cpp
+#include <envy/envy.hpp>
+
+struct Config {
+  int foo   = 0;
+  float bar = 0.0f;
+  bool baz  = false;
+};
+ENVY_CONFIG(Config, foo, bar, baz);
+
+int main() {
+  auto config = envy::get<Config>("APP_"); // prefix for env vars
+
+  std::cout << "foo : " << config.foo << "\n";
+  std::cout << "bar : " << config.bar << "\n";
+  std::cout << "baz : " << std::boolalpha << config.baz << "\n";
+}
+```
+
+```bash
+▶ ./main
+foo : 0
+bar : 0
+baz : false
+
+▶ APP_FOO=1 APP_BAR=3.14 APP_BAZ=1 ./main
+foo : 1
+bar : 3.14
+baz : true
+```
