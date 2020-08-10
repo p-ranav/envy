@@ -88,7 +88,7 @@ int main() {
 1 2 3 4 5
 ```
 
-### Deserialize JSON into `std::map`
+### Deserialize JSON into `std::map` (or `std::unordered_map` or even `nlohmann::json`)
 
 ```cpp
 #include <envy/envy.hpp>
