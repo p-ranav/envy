@@ -14,7 +14,7 @@
 
 `envy` is a small header-only library to deserialize environment variables into type-safe structs.
 
-### Getting Started
+### Quick Start
 
 Start by creating a `struct` where to store the values of environment variables. 
 
