@@ -42,8 +42,6 @@ struct is_specialization : std::false_type {};
 template <template <typename...> class Ref, typename... Args>
 struct is_specialization<Ref<Args...>, Ref> : std::true_type {};
 
-} // namespace details
-
 // Any field that is not a container type
 template <typename T>
 inline typename std::enable_if<!details::is_container<T>::value, T>::type
@@ -113,9 +111,11 @@ template <typename T> void visit(T &config, const std::string &prefix) {
   visit_struct::for_each(config, get_env_visitor);
 }
 
+} // namespace details
+
 template <typename T> T get(const std::string &prefix = "") {
   T result;
-  visit(result, prefix);
+  details::visit(result, prefix);
   return result;
 }
 
