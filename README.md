@@ -50,7 +50,7 @@ Compression Level     : 9
 Forward X11?          : false
 ```
 
-### Deserialize vectors from comma-separated environment variables
+### Deserialize comma-separated environment variables into `std::vector`
 
 ```cpp
 #include <envy/envy.hpp>
@@ -74,4 +74,10 @@ int main() {
 
 ▶ VALUES=1,2,3,4,5 ./vec
 1 2 3 4 5
+```
+
+### Deserialize JSON into `std::map`
+
+```cpp
+
 ```
