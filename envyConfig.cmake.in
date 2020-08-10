@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if (NOT TARGET envy::envy)
+  include(${CMAKE_CURRENT_LIST_DIR}/envyTargets.cmake)
+endif ()
