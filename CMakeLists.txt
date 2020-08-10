@@ -7,10 +7,10 @@ endif()
 if(CMAKE_VERSION VERSION_GREATER_EQUAL "3.12")
   project(envy VERSION 1.0.0 LANGUAGES CXX
     HOMEPAGE_URL "https://github.com/p-ranav/envy"
-    DESCRIPTION "envy: Deserialize environment variables into type-safe structs in modern C++")
+    DESCRIPTION "Deserialize environment variables into type-safe structs")
 elseif(CMAKE_VERSION VERSION_GREATER_EQUAL "3.9")
   project(envy VERSION 1.0.0 LANGUAGES CXX
-    DESCRIPTION "envy: Deserialize environment variables into type-safe structs in modern C++")
+    DESCRIPTION "Deserialize environment variables into type-safe structs")
 else()
   project(envy VERSION 1.9.0 LANGUAGES CXX)
 endif()
