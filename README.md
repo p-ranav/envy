@@ -117,7 +117,7 @@ b : 2
 c : 3
 ```
 
-### Prefix for Environment Variables
+### Application Prefix for Environment Variables
 
 ```cpp
 #include <envy/envy.hpp>
