@@ -61,7 +61,7 @@ Forward X11?          : false
 
 ### Deserialize comma-separated values
 
-Comma-separated environment variables can be deserialized into an `std::vector`:
+Comma-separated values can be deserialized into an `std::vector`:
 
 ```cpp
 #include <envy/envy.hpp>
