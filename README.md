@@ -4,7 +4,7 @@
 
 ### Getting Started
 
-Start by creating a `struct` where to store the values of environment variables. `envy` will check for environment variables that match the name of the fields in this struct. Specifically, `envy` will match the upper-case version of the field names, e.g., a field named `foo_bar` will be matched with an environment variable named `FOO_BAR`. 
+Start by creating a `struct` where to store the values of environment variables. 
 
 ```cpp
 #include <envy/envy.hpp>
@@ -19,7 +19,9 @@ struct ServerConfig {
 ENVY_CONFIG(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
 ```
 
-Now, simply call `envy::get_env<T>()` to get a filled config object.
+In the above code, `envy` will match the field named `forward_x11` with the environment variable `FORWARD_X11`, i.e., the uppercase version of the struct field name.
+
+Simply call `envy::get_env<T>()` to get a filled config object.
 
 ```cpp
 int main() {
