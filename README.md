@@ -123,9 +123,9 @@ c : 3
 #include <envy/envy.hpp>
 
 struct Config {
-  int foo   = 0;
+  int   foo = 0;
   float bar = 0.0f;
-  bool baz  = false;
+  bool  baz = false;
 };
 ENVY_STRUCT(Config, foo, bar, baz);
 
