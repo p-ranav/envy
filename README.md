@@ -34,15 +34,12 @@ Simply call `envy::get<T>()` to get a filled config object. For each field in th
 
 ```cpp
 int main() {
-
-  // Get environment variables and save into a `ServerConfig` object
   auto config = envy::get<ServerConfig>();
   
   std::cout << "Server Alive Interval : " << config.server_alive_interval << "\n";
   std::cout << "Compression Enabled?  : " << std::boolalpha << config.compression << "\n";
   std::cout << "Compression Level     : " << config.compression_level << "\n";
   std::cout << "Forward X11?          : " << std::boolalpha << config.forward_x11 << "\n"; 
-
 }
 ```
 
