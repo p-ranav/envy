@@ -23,8 +23,8 @@ Start by creating a `struct` where to store the values of environment variables.
 
 struct ServerConfig {
   int  server_alive_interval = 45;
-  bool compression           = true;
-  int  compression_level     = 9;
+  bool compression           = false;
+  int  compression_level     = 0;
   bool forward_x11           = true;
 };
 ENVY_STRUCT(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
@@ -52,8 +52,8 @@ Compression Enabled?  : true
 Compression Level     : 9
 Forward X11?          : true
 
-▶ SERVER_ALIVE_INTERVAL=23 FORWARD_X11=0 ./main
-Server Alive Interval : 23
+▶ SERVER_ALIVE_INTERVAL=90 COMPRESSION=1 COMPRESSION_LEVEL=9 FORWARD_X11=0 ./main
+Server Alive Interval : 90
 Compression Enabled?  : true
 Compression Level     : 9
 Forward X11?          : false
