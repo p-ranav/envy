@@ -22,10 +22,10 @@ Start by creating a `struct` where to store the values of environment variables.
 #include <envy/envy.hpp>
 
 struct ServerConfig {
-  int server_alive_interval = 45;
-  bool compression          = true;
-  int compression_level     = 9;
-  bool forward_x11          = true;
+  int  server_alive_interval = 45;
+  bool compression           = true;
+  int  compression_level     = 9;
+  bool forward_x11           = true;
 };
 ENVY_STRUCT(ServerConfig, server_alive_interval, compression, compression_level, forward_x11);
 ```
