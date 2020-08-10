@@ -49,3 +49,29 @@ Compression Enabled?  : true
 Compression Level     : 9
 Forward X11?          : false
 ```
+
+### Deserialize vectors from comma-separated environment variables
+
+```cpp
+#include <envy/envy.hpp>
+
+struct Config {
+  std::vector<int> values;
+};
+ENVY_CONFIG(Config, values);
+
+int main() {
+  auto config = envy::get<Config>();
+
+  for (auto& v : config.values) {
+    std::cout << v << " ";
+  }
+}
+```
+
+```bash
+▶ ./vec
+
+▶ VALUES=1,2,3,4,5 ./vec
+1 2 3 4 5
+```
